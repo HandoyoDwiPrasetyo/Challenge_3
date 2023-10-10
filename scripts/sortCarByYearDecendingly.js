@@ -18,21 +18,20 @@ function sortCarByYearDescendingly(cars) {
 
   // == Method 2 ==
   var len = result.length;
-  var swapped;
+  var swap;
 
   do {
-    swapped = false;
+    swap = false;
 
     for (var i = 0; i < len - 1; i++) {
       if (result[i].year < result[i + 1].year) {
-        // Tukar elemen jika elemen saat ini lebih besar dari elemen berikutnya
         var temp = result[i];
         result[i] = result[i + 1];
-        result[i + 1] = temp; 
-        swapped = true;
+        result[i + 1] = temp;
+        swap = true;
       }
     }
-  } while (swapped);
+  } while (swap);
 
   // Rubah code ini dengan array hasil sorting secara descending
   return result;
